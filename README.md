@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alana Landing
 
-## Getting Started
+Landing page en Next.js para capturar leads y agendar reuniones:
 
-First, run the development server:
+- Hero con titulo y bajada principal.
+- Video de YouTube embebido.
+- Formulario de contacto con validacion.
+- Calendly embebido para agendado.
+- Persistencia de leads en PostgreSQL (via Prisma).
+- Notificacion de nuevos contactos por email (Resend).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js (App Router) + TypeScript
+- Tailwind CSS
+- React Hook Form + Zod
+- Prisma + PostgreSQL (Neon recomendado)
+- Resend
+- Deploy en Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Copiar variables de entorno:
+   ```bash
+   cp .env.example .env
+   ```
+3. Configurar `DATABASE_URL`, `RESEND_API_KEY`, `CONTACT_NOTIFICATION_EMAIL` y `NEXT_PUBLIC_CALENDLY_URL`.
+4. Ejecutar migracion inicial de base de datos:
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+5. Levantar el proyecto:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+## Variables de entorno
 
-To learn more about Next.js, take a look at the following resources:
+Ver `.env.example`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `DATABASE_URL`
+- `RESEND_API_KEY`
+- `CONTACT_NOTIFICATION_EMAIL`
+- `NEXT_PUBLIC_CALENDLY_URL`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy en Vercel + GitHub
 
-## Deploy on Vercel
+1. Subir repositorio a GitHub.
+2. En Vercel, importar el repo.
+3. Cargar las variables de entorno en Project Settings.
+4. Confirmar que cada PR tenga Preview Deployment.
+5. Hacer merge a `main` para publicar en produccion.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Dominio propio (futuro)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Comprar/configurar dominio con tu proveedor.
+2. Agregar el dominio en Vercel (Project > Settings > Domains).
+3. Configurar registros DNS (A/CNAME) segun indique Vercel.
+4. Verificar HTTPS activo automaticamente.
