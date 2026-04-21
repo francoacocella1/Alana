@@ -1,13 +1,10 @@
 # Alana Landing
 
-Landing page en Next.js para capturar leads y agendar reuniones:
+Pagina de confirmacion en Next.js (flujo en 2 pasos, estilo pagina de gracias):
 
-- Hero con titulo y bajada principal.
-- Video de YouTube embebido.
-- Formulario de contacto con validacion.
-- Calendly embebido para agendado.
-- Persistencia de leads en PostgreSQL (via Prisma).
-- Notificacion de nuevos contactos por email (Resend).
+- Paso 1: progreso, avisos y video de YouTube embebido.
+- Paso 2: checklist para finalizar la reserva.
+- (Opcional) API de contacto, Prisma y Resend siguen en el repo si los queres usar despues.
 
 ## Stack
 
@@ -28,7 +25,7 @@ Landing page en Next.js para capturar leads y agendar reuniones:
    ```bash
    cp .env.example .env
    ```
-3. Configurar `DATABASE_URL`, `RESEND_API_KEY`, `CONTACT_NOTIFICATION_EMAIL` y `NEXT_PUBLIC_CALENDLY_URL`.
+3. Configurar al menos `NEXT_PUBLIC_YOUTUBE_EMBED_URL` para tu video. El resto solo si usas el endpoint de contacto.
 4. Ejecutar migracion inicial de base de datos:
    ```bash
    npx prisma migrate dev --name init
@@ -45,7 +42,7 @@ Ver `.env.example`:
 - `DATABASE_URL`
 - `RESEND_API_KEY`
 - `CONTACT_NOTIFICATION_EMAIL`
-- `NEXT_PUBLIC_CALENDLY_URL`
+- `NEXT_PUBLIC_YOUTUBE_EMBED_URL`
 
 ## Deploy en Vercel + GitHub
 
