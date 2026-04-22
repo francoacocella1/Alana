@@ -1,7 +1,6 @@
 import { abrilFatface, playfairDisplay } from "@/lib/fonts";
 
-const defaultEmbedUrl =
-  "https://www.youtube.com/embed/dQw4w9WgXcQ?si=nQf6xJ7yTR8oVGGQ";
+const defaultEmbedUrl = "https://www.youtube.com/embed/O_D295lOusE";
 
 export function DiagnosticFlowPage() {
   const videoSrc =
@@ -16,43 +15,51 @@ export function DiagnosticFlowPage() {
         Ir al contenido
       </a>
 
+      <div className="h-14 w-full bg-red-600 text-white shadow-[0_8px_18px_rgba(0,0,0,0.35)]">
+        <div className="mx-auto flex h-full w-full max-w-2xl items-center px-4 md:px-8">
+          <p className="truncate text-2xl font-semibold tracking-tight">
+            Paso 1 de 2: te queda solo el último 50%
+          </p>
+        </div>
+      </div>
+
       <main
         id="contenido-principal"
         className="mx-auto w-full max-w-2xl flex-1 px-5 py-10 md:px-8 md:py-14"
       >
         <section>
           <h2
-            className={`${playfairDisplay.className} text-center text-2xl font-semibold tracking-tight text-zinc-900 md:text-3xl`}
+            className={`${playfairDisplay.className} text-center text-2xl font-semibold tracking-tight text-white md:text-3xl`}
           >
             Paso 1 de 2
           </h2>
           <p
-            className={`${playfairDisplay.className} mt-4 text-center text-base font-medium text-zinc-800 md:text-lg`}
+            className={`${playfairDisplay.className} mt-4 text-center text-base font-medium text-zinc-200 md:text-lg`}
           >
             Te queda solo el último 50%
           </p>
 
           <div
-            className="mt-8 rounded-xl border-2 border-red-300 bg-red-50 px-4 py-4 text-center md:px-6"
+            className="mt-8 rounded-xl border-2 border-red-600 bg-red-950/40 px-4 py-4 text-center md:px-6"
             role="status"
           >
-            <p className="text-lg font-bold tracking-tight text-red-900 md:text-xl">
+            <p className="text-lg font-bold tracking-tight text-red-300 md:text-xl">
               🚨 ¡Aún no has terminado! 🚨
             </p>
           </div>
 
           <h1
-            className={`${abrilFatface.className} mt-10 text-balance text-center text-3xl font-normal leading-snug tracking-tight text-zinc-900 md:text-[2.35rem] md:leading-tight`}
+            className={`${abrilFatface.className} mt-10 text-balance text-center text-xl font-normal leading-snug tracking-tight text-white md:text-2xl md:leading-tight`}
           >
             Para confirmar tu reunión de diagnóstico, es necesario que veas este
             corto video y termines los pasos a seguir.
           </h1>
 
-          <p className="mt-6 text-center text-base font-medium text-zinc-800 md:text-lg">
+          <p className="mt-6 text-center text-base font-medium text-zinc-200 md:text-lg">
             Si no completas los pasos, tu reunión se cancela automáticamente.
           </p>
 
-          <div className="mt-10 overflow-hidden rounded-xl border border-zinc-200 bg-black/5 shadow-md">
+          <div className="mt-10 overflow-hidden rounded-xl border border-zinc-700 bg-zinc-950 shadow-md">
             <iframe
               className="aspect-video w-full"
               src={videoSrc}
@@ -64,18 +71,18 @@ export function DiagnosticFlowPage() {
           </div>
         </section>
 
-        <section className="mt-14 border-t border-zinc-200 pt-12">
+        <section className="mt-14 border-t border-zinc-700 pt-12">
           <h2
-            className={`${playfairDisplay.className} text-center text-2xl font-semibold tracking-tight text-zinc-900 md:text-3xl`}
+            className={`${playfairDisplay.className} text-center text-2xl font-semibold tracking-tight text-white md:text-3xl`}
           >
             Paso 2 de 2
           </h2>
           <p
-            className={`${playfairDisplay.className} mt-4 text-center text-base font-medium text-zinc-800 md:text-lg`}
+            className={`${playfairDisplay.className} mt-4 text-center text-base font-medium text-zinc-200 md:text-lg`}
           >
             Para finalizar tu reserva debes:
           </p>
-          <ol className="mt-8 list-decimal space-y-5 pl-6 text-base leading-relaxed text-zinc-800 marker:font-semibold md:pl-8">
+          <ol className="mt-8 list-decimal space-y-5 pl-6 text-base leading-relaxed text-zinc-100 marker:font-semibold marker:text-red-400 md:pl-8">
             <li className="pl-2">
               Agendar el día y hora en tu calendario.
             </li>
