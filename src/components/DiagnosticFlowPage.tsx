@@ -15,9 +15,9 @@ export function DiagnosticFlowPage() {
         Ir al contenido
       </a>
 
-      <div className="w-full bg-zinc-300/90 px-2 py-2 shadow-[0_8px_18px_rgba(0,0,0,0.35)] md:px-4">
-        <div className="mx-auto w-full max-w-2xl">
-          <p className="inline-block max-w-full rounded-md bg-red-600 px-3 py-2 text-sm leading-tight font-semibold tracking-tight text-white md:px-5 md:py-2.5 md:text-2xl">
+      <div className="w-full bg-black px-2 py-2 shadow-[0_8px_18px_rgba(0,0,0,0.35)] md:px-4">
+        <div className="mx-auto w-full max-w-2xl rounded-md bg-zinc-800/80">
+          <p className="w-1/2 rounded-md bg-red-600 px-3 py-2 text-[0.7rem] leading-tight font-semibold tracking-tight text-white md:px-5 md:py-2.5 md:text-xl">
             Paso 1 de 2: te queda solo el último 50%
           </p>
         </div>
