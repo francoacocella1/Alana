@@ -28,19 +28,8 @@ export function DiagnosticFlowPage() {
         className="mx-auto w-full max-w-2xl flex-1 px-5 py-10 md:px-8 md:py-14"
       >
         <section>
-          <h2
-            className={`${playfairDisplay.className} text-center text-2xl font-semibold tracking-tight text-white md:text-3xl`}
-          >
-            Paso 1 de 2
-          </h2>
-          <p
-            className={`${playfairDisplay.className} mt-4 text-center text-base font-medium text-zinc-200 md:text-lg`}
-          >
-            Te queda solo el último 50%
-          </p>
-
           <div
-            className="mt-8 rounded-xl border-2 border-red-600 bg-red-950/40 px-4 py-4 text-center md:px-6"
+            className="mt-0 rounded-xl border-2 border-red-600 bg-red-950/40 px-4 py-4 text-center md:px-6"
             role="status"
           >
             <p className="text-lg font-bold tracking-tight text-red-300 md:text-xl">
