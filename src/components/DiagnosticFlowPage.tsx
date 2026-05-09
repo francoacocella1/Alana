@@ -76,10 +76,29 @@ export function DiagnosticFlowPage() {
               Agendar el día y hora en tu calendario.
             </li>
             <li className="pl-2">
-              Para confirmarte tu reunión te enviaremos mensaje por WhatsApp;
-              debes responder.
+              Manda un mensaje al{" "}
+              <a
+                href="https://wa.me/5493513902020?text=YA%20AGENDE%20MI%20REUNI%C3%93N!%20CONFIRMO!%20Soy%20(tu%20nombre)"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-red-400 underline-offset-2 transition hover:text-red-300"
+              >
+                WhatsApp +5493513902020
+              </a>{" "}
+              diciendo: "YA AGENDE MI REUNIÓN! CONFIRMO! Soy (tu nombre)".
             </li>
-            <li className="pl-2">Avisar por INSTAGRAM que agendaste.</li>
+            <li className="pl-2">
+              Manda un mensaje al{" "}
+              <a
+                href="https://www.instagram.com/alana.saurit2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-red-400 underline-offset-2 transition hover:text-red-300"
+              >
+                instagram alana.saurit2
+              </a>{" "}
+              lo siguiente: "YA AGENDE MI REUNIÓN! CONFIRMO! Soy (tu nombre)".
+            </li>
             <li className="pl-2">
               Recuerda tomarte el tiempo y el espacio para tu reunión de
               diagnóstico en un lugar tranquilo.
